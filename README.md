@@ -8,7 +8,7 @@ El comando `Set-ExecutionPolicy` en PowerShell se utiliza para cambiar la polít
 
 ### Uso básico
 ```powershell
-Set-ExecutionPolicy <Política>
+Set-ExecutionPolicy Unrestricted
 ```
 
 ### Argumentos
@@ -19,14 +19,9 @@ Set-ExecutionPolicy <Política>
   - **Unrestricted**: Permite la ejecución de cualquier script, independientemente de si está firmado o no.
 
 ### Ejemplos
-Para establecer la política de ejecución de scripts en Restricted, se debe ejecutar el siguiente comando:
+Para establecer la política de ejecución de scripts en Unrestricted (permitir todos los scripts), se debe ejecutar el siguiente comando:
 ```powershell
-Set-ExecutionPolicy Restricted
-```
-
-Para establecer la política de ejecución de scripts en RemoteSigned, se debe ejecutar el siguiente comando:
-```powershell
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy Unrestricted
 ```
 
 ### Notas
@@ -34,7 +29,7 @@ Set-ExecutionPolicy RemoteSigned
 - La política de ejecución de scripts se puede establecer mediante el comando Set-ExecutionPolicy o mediante una directiva de grupo.
 
 ### Recomendaciones
-Se recomienda establecer la política de ejecución de scripts en Restricted o RemoteSigned para aumentar la seguridad del sistema.
+Se recomienda tener precaución al establecer la política en "Unrestricted", ya que esto permite la ejecución de cualquier script sin restricciones. Asegúrate de entender los riesgos asociados y úsalo solo en entornos controlados y de confianza.
 
-**Por favor, ten en cuenta que debes tener los permisos necesarios para cambiar la política de ejecución en tu sistema. Además, siempre debes tener cuidado al ejecutar scripts de fuentes desconocidas, ya que esto puede representar un riesgo de seguridad. Es recomendable utilizar la política "Unrestricted" solo en entornos controlados y de confianza. Si tienes alguna otra pregunta o necesitas más ayuda, no dudes en preguntar.**
+**Por favor, ten en cuenta que debes tener los permisos necesarios para cambiar la política de ejecución en tu sistema. Si tienes alguna otra pregunta o necesitas más ayuda, no dudes en preguntar.**
 ```
